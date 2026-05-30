@@ -60,10 +60,13 @@ Une fois connecté, le médecin est redirigé vers le tableau de bord (Dashboard
 #### 3. Résultat du Diagnostic et Indice de Confiance
 Dès la validation du formulaire, l'image subit un prétraitement automatique (redimensionnement en $224 \times 224 \times 3$ pixels et normalisation) avant d'être soumise au modèle de Deep Learning VGG16. 
 
-Le système applique un seuil de décision strict : un score supérieur à `0.5` classe la lésion comme maligne (**Malignant**), tandis qu'un score inférieur ou égal la classe comme bénigne (**Benign**). L'interface affiche instantanément le verdict accompagné de son indice de confiance précis.
+Le système applique un seuil de décision strict : un score supérieur à `0.5` classe la lésion comme maligne (**Malignant**), tandis qu'un score inférieur ou égal la classe comme bénigne (**Benign**). L'interface adapte dynamiquement sa charte graphique selon le verdict et affiche l'indice de confiance précis.
 
-![Résultat du Diagnostic](static/uploads/capture_result.png)
+* **Exemple de cas bénin (Score ≤ 0.5) :**
+![Résultat du Diagnostic - Bénin](static/uploads/capture_result.png)
 
+* **Exemple de cas malin (Score > 0.5) :**
+![Résultat du Diagnostic - Malin](static/uploads/capture_result_malignant.png)
 #### 4. Persistance des données (MySQL)
 Afin d'assurer un suivi médical rigoureux, chaque diagnostic généré par l'intelligence artificielle est instantanément journalisé en base de données. Le système enregistre le nom, l'âge, le verdict exact, la probabilité brute calculée et le chemin d'accès local de l'image au sein de la table `patients`. L'historique complet reste ainsi accessible à tout moment via l'onglet dédié.
 
