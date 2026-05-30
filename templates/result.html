@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Résultat du Diagnostic</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <div class="container mt-5 text-center">
+        <div class="card p-5 mx-auto" style="max-width: 500px;">
+            <h2>Résultat du Diagnostic</h2>
+            <hr>
+            
+            <div class="alert {% if result == 'Malignant' %}alert-danger{% else %}alert-success{% endif %} fs-4">
+                <strong>Diagnostic :</strong> {{ result }}
+            </div>
+            
+            <p class="fs-5">Indice de confiance : <strong>{{ prob }} %</strong></p>
+            
+            <div class="my-4">
+                <img src="{{ url_for('static', filename='uploads/' + img.split('/')[-1]) }}" width="300" class="img-thumbnail shadow-sm" alt="Lésion analysée">
+            </div>
+            
+            <a class="btn btn-primary w-100" href="/dashboard">Retour au Dashboard</a>
+        </div>
+    </div>
+</body>
+</html>
