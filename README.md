@@ -81,3 +81,5 @@ Ouvrez un terminal de commandes positionné à la racine du projet et exécutez 
 ```bash
 python app.py
 Une fois le serveur démarré, ouvrez votre navigateur web et accédez à l'adresse suivante : http://127.0.0.1:5000
+
+Remaque :  Le fichier du modèle IA `vgg16_skin_cancer.h5` étant trop lourd pour les restrictions de stockage de GitHub (>100 Mo), il doit être téléchargé séparément et placé manuellement dans le dossier `model/` avant le lancement.
