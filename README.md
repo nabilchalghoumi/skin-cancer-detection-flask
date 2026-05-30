@@ -1,6 +1,6 @@
 # Application Web de Détection du Cancer de la Peau - IA & Flask
 
-Ce projet complet a été réalisé dans le cadre des TD 7 (Deep Learning / Transfer Learning) et TD 8 (Développement Web / Bases de données). Il présente une solution d'aide au diagnostic médical capable de classifier des images de lésions cutanées en deux catégories : **Bénigne** ou **Maligne**.
+Ce projet complet a été réalisé dans le cadre de (Deep Learning / Transfer Learning) et(Développement Web / Bases de données). Il présente une solution d'aide au diagnostic médical capable de classifier des images de lésions cutanées en deux catégories : **Bénigne** ou **Maligne**.
 
 ---
 
@@ -19,7 +19,7 @@ Le jeu de données comprenait **493 images d'entraînement** et **132 images de 
   - `Dropout(0.5)` : Pour la régularisation.
   - `Dense(1, activation='sigmoid')` : Pour obtenir une sortie binaire (0 ou 1).
 
-### 3. Performances & Évaluation (TD 7)
+### 3. Performances & Évaluation 
 Le modèle a été entraîné sur **10 époques** avec l'optimiseur Adam ($learning\_rate = 10^{-4}$) et la fonction de perte `binary_crossentropy`.
 
 #### Courbes d'apprentissage
@@ -33,7 +33,7 @@ Le modèle final a été exporté sous le format standard `vgg16_skin_cancer.h5`
 
 ---
 
-## 💻 Partie 2 : L'Application Web Flask (TD 8)
+## 💻 Partie 2 : L'Application Web Flask 
 
 L'application web permet aux praticiens d'utiliser le modèle IA à travers une interface graphique conviviale et de sauvegarder l'historique des consultations.
 
